@@ -15,7 +15,7 @@ export const loginUserSchema = zod.object({
     password: zod.string().min(6).max(18),
 });
 
-// the assignment schema
-export const assignmentSchema = zod.object({
-    task: zod.string().min(1, "Tasks must be at least 1 character").max(1000, "Tasks must be at most 1000 characters"),
+// the task schema
+export const taskSchema = zod.object({
+    task: zod.string().min(1, "Task must be at least 1 character").max(1000, "Task must be at most 1000 characters"),
 });

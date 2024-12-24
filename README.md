@@ -22,7 +22,7 @@ To expand and utilise the power of the internet by connecting a user and an onli
 Please, before going ahead, make sure you have Node.js installed on your device, and you do have a MongoDB URL instance for storing the data.
 
 ### Get started
-<u>Note:-</u><span> Please GO to the <b>localhost:3000/v1/api-docs</b> or whichever port you have manually configured in the .env file in order to find all the endpoints.
+<u>Note:-</u><span> Please GO to the ([deployed production link](https://task-storage-auth-app.onrender.com/v1/api-docs)) OR <b>localhost:3000/v1/api-docs</b> or whichever port you have manually configured in the .env file in order to find all the endpoints.
 
 ### Installation
 To install this tool, follow these steps:
@@ -56,4 +56,4 @@ This command will install all the dependencies.
 ```sh
 node index.js
 ```
-At the root directory, run that command and make sure again you are at the right directory level. After running it, <b>Please go to localhost:3000/v1/api-docs</b> to check which endpoints are there. One more thing: remember to provide the bearer token for authenticated requests.
+At the root directory, run that command and make sure again you are at the right directory level. After running it, <b>Please go to localhost:3000/v1/api-docs</b> OR ([deployed production link](https://task-storage-auth-app.onrender.com/v1/api-docs)) to check which endpoints are there. One more thing: remember to provide the bearer token for authenticated requests.

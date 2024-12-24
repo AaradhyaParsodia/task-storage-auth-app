@@ -166,13 +166,13 @@ const options = {
                         success: { type: 'boolean', example: 'true' },
                         message: { type: 'string', example: 'Task deleted successfully' },
                     }
-                }
-            },
-            Error: {
-                type: 'object',
-                properties: {
-                    message: { type: 'string' },
-                    details: { type: 'array', items: { type: 'string' } }
+                },
+                Error: {
+                    type: 'object',
+                    properties: {
+                        message: { type: 'string' },
+                        details: { type: 'array', items: { type: 'string' } }
+                    }
                 }
             },
         }

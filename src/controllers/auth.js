@@ -82,7 +82,7 @@ export const login = async (req, res) => {
 
         if (!success) {
             return res.status(400).json({
-                message: "Incorrect input's",
+                message: "Invalid input's",
                 details: error.issues
             });
         }

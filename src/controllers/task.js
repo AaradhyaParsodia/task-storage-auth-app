@@ -8,7 +8,7 @@ export const getAllTasks = async (req, res) => {
 
     try {
 
-        let query = Tasks.find({ isDeleted: false });
+        let query = Tasks.find({ userId: _id, isDeleted: false });
 
         const offset = ( page - 1 ) * limit;
         const totalTasks = await Tasks.countDocuments({ userId: _id, isDeleted: false });
@@ -128,7 +128,7 @@ export const updateTaskById = async (req, res) => {
         const { success, error } = taskSchema.safeParse(req.body);
 
         if (!success) {
-            return res.status(400).json({
+            return res.status(422).json({
                 message: "Invalid input",
                 errors: error.issues
             });
@@ -154,9 +154,9 @@ export const updateTaskById = async (req, res) => {
         const updatedTask = await Tasks.findByIdAndUpdate(id, task, { new: true });
 
 
-        if (!success.modifiedCount) {
-            return res.status(400).json({
-                message: "Error: Task could not be updated. Try again later."
+        if (!updatedTask) {
+            return res.status(409).json({
+                message: "Error: The task could not be updated. Please try again later."
             });
         }
 
@@ -210,8 +210,8 @@ export const deleteTaskById = async (req, res) => {
         });
 
         if (!success.modifiedCount) {
-            return res.status(400).json({
-                message: "Error Task Can't be deleted try again later"
+            return res.status(409).json({
+                message: "Error: The task could not be updated. Please try again later."
             });
         }
 

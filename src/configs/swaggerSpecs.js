@@ -21,12 +21,12 @@ const options = {
         ],
         tags: [
             {
-                name: "User",
-                description: "User for Managing the tasks and details"
-            },
-            {
                 name: "Auth",
                 description: "User Authentication, Authorisation and Management"
+            },
+            {
+                name: "Tasks",
+                description: "Performing Managing operation on the tasks and its details"
             }
         ],
         components: {
@@ -40,7 +40,7 @@ const options = {
             schemas: {
                 UserRegisterBody: {
                     type: 'object',
-                    properties: {
+                properties: {
                         name: { type: 'string', example: 'jane' },
                         username: { type: 'string', example: 'jane_pane_' },
                         email: { type: 'string', format: 'email', example: 'jane@pane.com' },
@@ -114,7 +114,7 @@ const options = {
                             properties: {
                                 _id: { type: 'string', example: '66e141cb6828d8e26178f5b6' },
                                 userId: { type: 'string', example: '6828d8e26178f5b666e141cb' },
-                                task: { type: 'string', example: '150 coding problems' },                         createdAt: updatedTask.createdAt,
+                                task: { type: 'string', example: '150 coding problems' },                         
                                 createdAt: { type: 'string', example: '2024-12-01T18:59:45.711+00:00' },
                                 updatedAt: { type: 'string', example: '2024-12-01T19:35:59.891+00:00' }
                             }
@@ -153,7 +153,7 @@ const options = {
                             properties: {
                                 _id: { type: 'string', example: '66e141cb6828d8e26178f5b6' },
                                 userId: { type: 'string', example: '6828d8e26178f5b666e141cb' },
-                                task: { type: 'string', example: '150 coding problems' },                         createdAt: updatedTask.createdAt,
+                                task: { type: 'string', example: '150 coding problems' },                         
                                 createdAt: { type: 'string', example: '2024-12-01T18:59:45.711+00:00' },
                                 updatedAt: { type: 'string', example: '2024-12-01T19:35:59.891+00:00' }
                             }

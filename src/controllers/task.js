@@ -60,7 +60,14 @@ export const getById = async (req, res) => {
         }
 
         res.status(200).json({
-            task
+            success: true, 
+            task: {
+                _id: task._id,
+                userId: task.userId,
+                task: task.task,
+                createdAt: task.createdAt,
+                updatedAt: task.updatedAt
+            } 
         });
 
     } catch (error) {
@@ -94,7 +101,7 @@ export const createNewTask = async (req, res) => {
 
         res.status(201).json({
             success: true,
-            assignmentId: createdTask._id,
+            taskId: createdTask._id,
             message: "Task created successfully"
         });
         
@@ -156,7 +163,13 @@ export const updateTaskById = async (req, res) => {
         res.status(200).json({ 
             success: true, 
             message: 'Task updated successfully',
-            data: updatedTask 
+            updateTask: {
+                _id: updatedTask._id,
+                userId: updatedTask.userId,
+                task: updatedTask.task,
+                createdAt: updatedTask.createdAt,
+                updatedAt: updatedTask.updatedAt
+            } 
         });
 
     } catch (error) {

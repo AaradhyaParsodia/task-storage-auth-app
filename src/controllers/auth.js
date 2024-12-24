@@ -64,7 +64,6 @@ export const register = async (req, res) => {
             success: true,
             message: "User registered successfully",
             userId: newUser._id,
-            role: newUser.role,
             token: token
         });
 
